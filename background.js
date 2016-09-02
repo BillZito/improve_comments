@@ -1,4 +1,4 @@
-//background.js
+//background.js--this is just a test to try changing things when icon clicked
 
 //called when user clicks on browser action
 chrome.browserAction.onClicked.addListener(function(tab){

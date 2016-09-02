@@ -464,10 +464,9 @@ xrated:1,
 xxx:1
 };
 
-//
+//look for comments of class .c00 and change it to "censored" if it 
+//contains a badword
 var badKeys = Object.keys(bad_words);
-//console.log(badKeys);
-var $body = $('body');
 $('.c00').each(function(i, item){
 	for (var x = 0; x < badKeys.length; x++){
 		if (item.innerHTML.includes(badKeys[x])){
