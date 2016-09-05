@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Improve Comments",
+	"name": "Not Now",
 	"version": "1.0",
 	"content_scripts": [
 		{
@@ -11,8 +11,10 @@
 		}
 	],
 	"browser_action": {
-		"default_icon": "icon.png"
+		"default_icon": "icon16.png"
 	},
+	"icons": {"48": "icon128.png",
+			  "128": "icon128.png"},
 	"background": {
 		"scripts": ["background.js"]
 	}

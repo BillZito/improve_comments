@@ -1,5 +1,5 @@
-Improve Comments is a filtering system that turns all Hacker News comments that contain offensive wordchoice into "censored"
+Improve Comments, aka "Not now," is a chrome extension filtering out both offensive comments and those about recent shootings on facebook, youtube, and hackernews so that users don't have to deal with hateful comments and a facebook newsfeed full of autoplaying shooting videos.
 
-Future work
-*Filter out words from reddit, youtube, facebook, and other popular sites
-*Use NLP to figure out when sentences are offensive instead of just looking for individual word choice
+Get it here: 
+
+Potential future work: use NLP to figure out when sentences are offensive instead of just looking for individual word choice
