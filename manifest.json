@@ -1,7 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Not Now",
-	"version": "1.0",
+	"short_name": "Filtering facebook so you can live your life",
+	"version": "1.0.1",
 	"content_scripts": [
 		{
 			"matches": [
