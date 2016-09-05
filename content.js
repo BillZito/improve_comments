@@ -3,8 +3,26 @@ chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResposne){
 		//if the message is the clicked browser action, log first link
 		if(request.message === "clicked_browser_action") {
-			var firstHref = $("a[href^='http']").eq(0).attr("href");
-			console.log(firstHref);
+			//HN: look for comments of class .c00 and change text if so
+			$('.c00').each(function(i, item){
+				for (var x = 0; x < badKeys.length; x++){
+					if (item.innerHTML.includes(badKeys[x])){
+						item.innerHTML = "ignore me, I'm probably not worth reading";
+					}
+				}
+			});
+
+			//Youtube: do the same. Do on click because comments must
+			//load before clicking
+			$('.comment-renderer-text-content').each(function(i, item){
+				for (var x = 0; x < badKeys.length; x++){
+					if (item.innerHTML.includes(badKeys[x])){
+						item.innerHTML = "ignore me, I'm probably not worth reading";
+					}
+				}
+			});
+
+			//
 		}
 	}
 );
@@ -464,13 +482,4 @@ xrated:1,
 xxx:1
 };
 
-//look for comments of class .c00 and change it to "censored" if it 
-//contains a badword
 var badKeys = Object.keys(bad_words);
-$('.c00').each(function(i, item){
-	for (var x = 0; x < badKeys.length; x++){
-		if (item.innerHTML.includes(badKeys[x])){
-			item.innerHTML = "censored";
-		}
-	}
-});
